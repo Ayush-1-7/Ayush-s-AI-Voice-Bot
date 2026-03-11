@@ -1,0 +1,17 @@
+{
+  "name": "ai-voice-bot",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "@vapi-ai/web": "^2.5.2"
+  }
+}

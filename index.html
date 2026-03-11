@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zensar Technologies — Virtual Recruitment Assistant</title>
+  <meta name="description"
+    content="Speak with Zensar Technologies' AI-powered recruitment assistant. Get answers about job opportunities, company culture, and schedule your interview — all through voice." />
+  <meta property="og:title" content="Zensar Technologies — Virtual Recruitment Assistant" />
+  <meta property="og:description"
+    content="AI-powered voice recruitment assistant for Zensar Technologies. Schedule interviews and learn about career opportunities." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/zensar-logo.svg" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="ambient-orb ambient-orb--1"></div>
+    <div class="ambient-orb ambient-orb--2"></div>
+    <div class="ambient-orb ambient-orb--3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <div class="header__brand">
+        <div class="header__logo">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-grad)" />
+            <path d="M10 26L16 14H24L18 26H10Z" fill="white" opacity="0.9" />
+            <path d="M20 14L26 26H30L24 14H20Z" fill="white" opacity="0.7" />
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40">
+                <stop stop-color="#6366f1" />
+                <stop offset="1" stop-color="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <h1 class="header__title">Zensar Technologies</h1>
+          <p class="header__subtitle">Virtual Recruitment Assistant</p>
+        </div>
+      </div>
+      <div class="header__status" id="connectionStatus">
+        <span class="status-dot"></span>
+        <span class="status-text">Ready</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Hero Section - Voice Bot Interface -->
+    <section class="hero" id="heroSection">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          AI-Powered Voice Assistant
+        </div>
+        <h2 class="hero__heading">
+          Your Recruitment Journey<br />
+          <span class="hero__heading--gradient">Starts Here</span>
+        </h2>
+        <p class="hero__description">
+          Speak directly with our AI recruitment assistant. Get quick answers about
+          Zensar, explore career opportunities, and schedule your interview — all through voice.
+        </p>
+
+        <!-- Voice Interface Card -->
+        <div class="voice-card" id="voiceCard">
+          <!-- Audio Visualizer -->
+          <div class="visualizer" id="visualizer">
+            <div class="visualizer__bars">
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+              <span class="visualizer__bar"></span>
+            </div>
+          </div>
+
+          <!-- Call Controls -->
+          <div class="voice-card__controls">
+            <button class="btn-call" id="callButton" aria-label="Start voice call">
+              <svg class="btn-call__icon btn-call__icon--phone" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <svg class="btn-call__icon btn-call__icon--end" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            <button class="btn-control btn-mute" id="muteButton" aria-label="Mute microphone" disabled>
+              <svg class="btn-control__icon btn-control__icon--unmuted" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="23" />
+                <line x1="8" y1="23" x2="16" y2="23" />
+              </svg>
+              <svg class="btn-control__icon btn-control__icon--muted" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="1" y1="1" x2="23" y2="23" />
+                <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6" />
+                <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2c0 .76-.13 1.49-.35 2.17" />
+                <line x1="12" y1="19" x2="12" y2="23" />
+                <line x1="8" y1="23" x2="16" y2="23" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Call State Label -->
+          <p class="voice-card__label" id="callLabel">Click to start a conversation</p>
+
+          <!-- Call Timer -->
+          <p class="voice-card__timer" id="callTimer">00:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversation Flow & Transcript Section -->
+    <section class="section" id="conversationSection">
+      <div class="section__grid">
+        <!-- Live Transcript -->
+        <div class="card transcript-card" id="transcriptCard">
+          <div class="card__header">
+            <div class="card__header-left">
+              <span class="card__icon">💬</span>
+              <h3 class="card__title">Live Transcript</h3>
+            </div>
+            <span class="transcript-live-badge" id="transcriptBadge">
+              <span class="transcript-live-dot"></span>
+              LIVE
+            </span>
+          </div>
+          <div class="transcript" id="transcript">
+            <div class="transcript__empty">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                opacity="0.3">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+              <p>Start a call to see the live transcript here</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conversation Steps -->
+        <div class="card steps-card">
+          <div class="card__header">
+            <div class="card__header-left">
+              <span class="card__icon">📋</span>
+              <h3 class="card__title">Conversation Flow</h3>
+            </div>
+          </div>
+          <div class="steps" id="conversationSteps">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Info & FAQ Section -->
+    <section class="section" id="infoSection">
+      <div class="section__grid">
+        <!-- Company Info -->
+        <div class="card company-card">
+          <div class="card__header">
+            <div class="card__header-left">
+              <span class="card__icon">🏢</span>
+              <h3 class="card__title">About Zensar Technologies</h3>
+            </div>
+          </div>
+          <p class="company-card__overview" id="companyOverview"></p>
+
+          <div class="company-card__stats">
+            <div class="stat-item">
+              <span class="stat-item__value">30+</span>
+              <span class="stat-item__label">Global Locations</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__value">10K+</span>
+              <span class="stat-item__label">Professionals</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__value">6+</span>
+              <span class="stat-item__label">Industries</span>
+            </div>
+          </div>
+
+          <div class="company-card__services">
+            <h4 class="company-card__sub-title">Our Services</h4>
+            <div class="tag-cloud" id="servicesCloud"></div>
+          </div>
+
+          <div class="company-card__industries">
+            <h4 class="company-card__sub-title">Industries We Serve</h4>
+            <div class="tag-cloud tag-cloud--industries" id="industriesCloud"></div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="card faq-card">
+          <div class="card__header">
+            <div class="card__header-left">
+              <span class="card__icon">❓</span>
+              <h3 class="card__title">Frequently Asked Questions</h3>
+            </div>
+          </div>
+          <div class="faq-list" id="faqList">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 Zensar Technologies. All rights reserved. Powered by <a href="https://vapi.ai"
+          target="_blank" rel="noopener">VAPI AI</a></p>
+      <p class="footer__tagline">Experience-led everything.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
